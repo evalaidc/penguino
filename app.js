@@ -33,6 +33,9 @@ camera.position.z = 5;
 //render loop - causes renderer to draw something 60 times per second
 function render() {
 	requestAnimationFrame( render );
+  // gives the cube rotation
+  cube.rotation.x += 0.01;
+  cube.rotation.y += 0.01;
 	renderer.render( scene, camera );
 }
 render();
