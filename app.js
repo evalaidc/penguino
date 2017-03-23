@@ -24,15 +24,16 @@ let geometry = new THREE.BoxGeometry( 2, 2, 2 );
 
 // adds color to the cube - one of three.js's materials to color it.
 let material = new THREE.MeshBasicMaterial( { color: 0x7F7FFF } );
+let material1 = new THREE.MeshBasicMaterial( { color: 0xFF9999} );
 
 //mesh = object that takes geometry and applies material to it.
 let cube = new THREE.Mesh( geometry, material );
-let cube1 = new THREE.Mesh( geometry, material );
+let cube1 = new THREE.Mesh( geometry, material1 );
 
 //adds item/object
 scene.add( cube, cube1 );
 
-//adds white pointlight
+//adds white pointlight// doesn't work
 let light = new THREE.PointLight(0xFFFFFF, 1.5);
   // (x, y, z)
   light.position.set(-100,200,100);
@@ -50,10 +51,10 @@ camera.position.z = 10;
 function render() {
 	requestAnimationFrame( render );
   // gives the cube rotation
-  cube.rotation.x += 0.1;
-  cube.rotation.y += 0.1;
-  cube1.rotation.x -=0.1;
-  cube1.rotation.y -=0.1;
+  cube.rotation.x += 0.02;
+  cube.rotation.y += 0.02;
+  cube1.rotation.x -=0.02;
+  cube1.rotation.y -=0.02;
 	renderer.render( scene, camera );
   controls.update();
 
