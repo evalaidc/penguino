@@ -19,6 +19,6 @@ https://threejs.org/docs/index.html#Manual/Getting_Started/Creating_a_scene
 
 
 Three Interview Questions:
-1) How would you like to use Three.js?
-2) If you were given Three.js, what methods would you use to study it?
+1) What does the camera perspective do?
+2) Why is camera.position.z important to enforce?
 3) If you could build a game using Three.js, what would you build and why?
