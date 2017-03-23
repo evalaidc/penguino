@@ -29,13 +29,3 @@ var cube = new THREE.Mesh( geometry, material );
 scene.add( cube );
 //default - object will add to coordinates (0,0,0) --> which leads to issues with the camera.
 camera.position.z = 5;
-
-//render loop - causes renderer to draw something 60 times per second
-function render() {
-	requestAnimationFrame( render );
-  // gives the cube rotation
-  cube.rotation.x += 0.01;
-  cube.rotation.y += 0.01;
-	renderer.render( scene, camera );
-}
-render();
